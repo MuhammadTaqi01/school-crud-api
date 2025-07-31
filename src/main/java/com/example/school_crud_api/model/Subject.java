@@ -12,14 +12,12 @@ public class Subject {
 
     private String name;
 
-    // Optional: Relationship with Teacher or Assessment
     @ManyToMany(mappedBy = "subjects")
     private List<Teacher> teachers;
 
     @OneToMany(mappedBy = "subject")
     private List<Assessment> assessments;
 
-    // Getters and setters
     public Long getId() {
         return id;
     }
